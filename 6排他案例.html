@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            margin: 10px;
+            float: left;
+        }
+    </style>
+    <script>   
+   
+        window.onload=()=>{
+             
+            var divArr = document.getElementsByTagName("div");
+            var targetDiv = divArr[0];
+            targetDiv.style.background = "red";
+            for (let i = 0; i < divArr.length; i++) {
+                const element = divArr[i];
+                element.onclick = function(){
+                    //第一步把所有的div都变蓝
+                    // for (let j = 0; j < divArr.length; j++) {
+                    //     const div = divArr[j];
+                    //     div.style.background = "blue";
+                        
+                    // }
+                    targetDiv.style.background  = "blue";
+                    targetDiv = this;
+                    targetDiv.style.background = "red";
+                     //把当前div变红
+                     //this.style.background = "red";
+                }
+                
+            }
+            
+        };
+    
+    </script>
+</head>
+<body>
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+</body>
+</html>
